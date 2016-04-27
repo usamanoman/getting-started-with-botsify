@@ -36,36 +36,27 @@ This is the ID of your application which you just created. You can find it in yo
 
 ![alt text](http://i.imgur.com/mrjbNnr.png "Facebook Application ID")
 
-```
-![alt text](http://i.imgur.com/mrjbNnr.png "Facebook Application ID")
-```
 ### Secret Key
 
 It is just a connector between Facebook Application Webhook and Botsify. You can type anything for example **my_secret_key**.
 
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.github('USER/REPO', 'Changelog.md')
-});
-```
+![alt text](http://i.imgur.com/XAJPaf3.png "Secret Key")
 
 ### Facebook page access token
 
 It is the access token of the page for which you want to make your chatbot.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.github('USER/REPO', 'Changelog.md')
-});
-```
+![alt text](http://i.imgur.com/EW3dlmb.png "Facebook page access token")
 
 Connecting your facebook application with botsify
 ---------------
 
 Once you have filled this form you will see your application webhook. This webhook will allow you to connect your facebook application with Botsify.
 
-To setup a webhook you need to go to “Your Facebook Application -> Messenger -> Setup Webhook”. You will see a webhook configuration form like in the snapshot below.
+To setup a webhook you need to go to “Your Facebook Application -> Messenger -> Setup Webhook -> Edit Events”. You will see a webhook configuration form like in the snapshot below.
+
+![alt text](http://i.imgur.com/sQEUr83.png "Connecting your facebook application with botsify")
 
  * Your URL is going to be the one provided by Botsify.
  * Your Application Secret Key is going be the same which you filled while filling your form.
