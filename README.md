@@ -35,19 +35,26 @@ The main JS and CSS files are also available in [npm] and [bower].
 [bower]: http://bower.io/search/?q=flatdoc
 [npm]: https://www.npmjs.org/package/flatdoc
 
-### Via GitHub
+Registering on Botsify and creating your first bot:
+---------------
+
+Once you have created the application in Facebook you need to create an account with Botsify and login. In the left hand menu you should see “Create Bot”, go ahead and click it. It is a simple form to take information about your Facebook application and page which you just created. You need to know following fields before filling out this form.
+
+
+### Facebook Application ID
 
 To fetch a Github Repository's readme file, use the `Flatdoc.github` fetcher.
-This will fetch the Readme file of the repository's default branch.
+This is the ID of your application which you just created. You can find it in your application settings.
 
 ``` javascript
 Flatdoc.run({
   fetcher: Flatdoc.github('USER/REPO')
 });
 ```
+### Secret Key
 
-You may also fetch another file other than the Readme file, just specify it as
-the 2nd parameter.
+It is just a connector between Facebook Application Webhook and Botsify. You can type anything for example “my_secret_key”.
+
 
 ``` javascript
 Flatdoc.run({
@@ -55,7 +62,15 @@ Flatdoc.run({
 });
 ```
 
-After you've done this, you probably want to deploy it via [GitHub Pages].
+### Facebook page access token
+
+It is the access token of the page for which you want to make your chatbot.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.github('USER/REPO', 'Changelog.md')
+});
+```
 
 [GitHub Pages guide >][GitHub Pages]
 
