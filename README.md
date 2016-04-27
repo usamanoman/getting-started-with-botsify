@@ -87,14 +87,11 @@ To setup a webhook you need to go to “Your Facebook Application -> Messenger -
 Verifying Application Connection
 ---------------
 
-Once you see this “Green Check mark”. It is a clear signal that you have successfully connected your application and Botsify.
+### Verification from facebook
 
-To setup a webhook you need to go to “Your Facebook Application -> Messenger -> Setup Webhook”. You will see a webhook configuration form like in the snapshot below.
+Once you see this **Green Check mark**. It is a clear signal that you have successfully connected your application and Botsify.
 
- * Now turn on your application in Botsify. You can also use this button to turn it off anytime to switch from **Bot mode** to **manual mode**.
- * Go to your facebook page (which you connected)
- * Send message to the page and type **Hi**.
- * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
+To setup a webhook you need to go to **Your Facebook Application -> Messenger -> Setup Webhook**. You will see a webhook configuration form like in the snapshot below.
 
 ``` javascript
 Flatdoc.run({
@@ -102,19 +99,67 @@ Flatdoc.run({
 });
 ```
 
-How it works
+### Verification from botsify
+
+ * Now turn on your application in Botsify. You can also use this button to turn it off anytime to switch from **Bot mode** to **manual mode**.
+ * Go to your facebook page (which you connected)
+ * Send message to the page and type **Hi**.
+ * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
+ * Go back to Botsify and click “Test”. If all set you should get this screen which will help you write your chatbot?
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+Write / Setup your chatbot responses
 ------------
 
-Flatdoc is a hosted `.js` file (along with a theme and its assets) that you can
-add into any page hosted anywhere.
+Botsify let you manage your chatbot through a simple and easy interface. We currently support two type of responses.
+ * Basic Responses
+ * Advance Responses
 
-#### All client-side
+### Adding Basic Responses
 
-There are no build scripts or 3rd-party services involved. Everything is done in
-the browser. Worried about performance? Oh, It's pretty fast.
+For basic responses we currently have **Greeting Response** which will be the first response to your customers when they start conversation with the Bot. 
 
-Flatdoc utilizes the [GitHub API] to fetch your project's Readme files. You may
-also configure it to fetch any arbitrary URL via AJAX.
+Let’s type : **Hi welcome. Please use @list to know about all commands I support**.
+
+Second is **Default Response** which is the response when your chatbot will fail to understand the conversation. 
+
+Let’s type : **Sorry, I don’t understand what you are saying. Let’s start over with @list**.
+
+Once you have submitted these two responses you can go back to your page and chat with your bot. You will not receive the greeting message because you have already started conversation with the bot but if you type “asasafaf3131”; some gibberish; it will respond with our default response.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+#### Adding Advance Responses
+
+##### Understand the UI of advance responses
+
+For advance responses you can go extra mile and create some hard coded and dynamic API based responses. You will see “Messenger like” UI in advance responses which let you create stories with respect to your business.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+Let’s understand the UI first. If you select “Your Application name” in left hand panel it means you are trying to chat as a user. And if you have user selected in the left hand panel it means you are trying to chat as a bot.
+
+In lower of the left hand panel there are command and parameter fields. So let’s talk more about commands and parameters.
+
 
 #### Lightning-fast parsing
 
