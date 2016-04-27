@@ -104,14 +104,17 @@ Flatdoc.run({
  * Now turn on your application in Botsify. You can also use this button to turn it off anytime to switch from **Bot mode** to **manual mode**.
  * Go to your facebook page (which you connected)
  * Send message to the page and type **Hi**.
- * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
- * Go back to Botsify and click “Test”. If all set you should get this screen which will help you write your chatbot?
 
 ``` javascript
 Flatdoc.run({
   fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
 });
 ```
+
+ * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
+ * Go back to Botsify and click “Test”. If all set you should get this screen which will help you write your chatbot?
+
+
 
 ``` javascript
 Flatdoc.run({
@@ -130,11 +133,11 @@ Botsify let you manage your chatbot through a simple and easy interface. We curr
 
 For basic responses we currently have **Greeting Response** which will be the first response to your customers when they start conversation with the Bot. 
 
-Let’s type : **Hi welcome. Please use @list to know about all commands I support**.
+ * Let’s type : **Hi welcome. Please use @list to know about all commands I support**.
 
 Second is **Default Response** which is the response when your chatbot will fail to understand the conversation. 
 
-Let’s type : **Sorry, I don’t understand what you are saying. Let’s start over with @list**.
+ * Let’s type : **Sorry, I don’t understand what you are saying. Let’s start over with @list**.
 
 Once you have submitted these two responses you can go back to your page and chat with your bot. You will not receive the greeting message because you have already started conversation with the bot but if you type “asasafaf3131”; some gibberish; it will respond with our default response.
 
@@ -156,19 +159,65 @@ Flatdoc.run({
 });
 ```
 
-Let’s understand the UI first. If you select “Your Application name” in left hand panel it means you are trying to chat as a user. And if you have user selected in the left hand panel it means you are trying to chat as a bot.
+Let’s understand the UI first. If you select **Your Application name** in left hand panel it means you are trying to chat as a user. And if you have user selected in the left hand panel it means you are trying to chat as a bot.
 
 In lower of the left hand panel there are command and parameter fields. So let’s talk more about commands and parameters.
 
 
-#### Lightning-fast parsing
+##### Commands:
 
-Next, it uses [marked], an extremely fast Markdown parser that has support for
-GitHub flavored Markdown.
+Command is something which your chatbot supports and user can use it. In step 1 we asked user to type @list to know about our commands. @list itself is a command but it has no parameters. So let’s say user type @list we can responds this message in any manner we like.
 
-Flatdoc then simply renders *menu* and *content* DOM elements to your HTML
-document. Flatdoc also comes with a default theme to style your page for you, or
-you may opt to create your own styles.
+##### Parameters:
+
+Parameters are something which gives some context to a command. Let’s say “@shoes/men” gives the context that our user is interested in men shoes. So shoes can be of several different types and parameters help us understand more about @shoes.
+
+
+
+Creating advance chatbot for a shoe store
+-----------------------------------------
+
+
+Let’s say we have an online shoes website and a story is user is chatting in order to know what products are available.
+
+ * So while you have **bot** selected in the left hand panel type @list as a user. You will see the command and parameters fields are automatically filled. 
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+ * Now select **User** from left hand panel and respond to this command as a “Chatbot” we will write: **@shoes/men @shoes/women @sandals @slippers**
+ * A confirmation pop up will appear; click **OK** to submit your response. 
+ * Go back to facebook messenger and type: **@list**. You will see that you get the response of @list we just submitted.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+Now assume our user is more interested in **Men shoes** and writes @shoes/men. Once you type this command as a user **command and parameter fields** will be auto filled with “shoes” and “men” respectively. Since you can have any number of parameters to give more contexts to your command you will see **param1** associated as the key of your first parameter.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
+Now responds to this message as a bot and type: **Sorry, we do not have {param1} shoes in stock. Do you want me to show some slippers?**.
+
+Now you see we can use parameters of command in our responses to make it more customized. 
+So if you go back to your messenger and type: **@shoes/men** you will see that your bot says. **Sorry, we do not have men shoes in stock. Do you want me to show some slippers?**.
+
+Since this is personalized response even if your user type **@shoes/women** your bot will say. **Sorry we do not have women shoes in stock. Do you want me to show some slippers?**.
+
+``` javascript
+Flatdoc.run({
+  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
+});
+```
+
 
 Markdown extras
 ---------------
