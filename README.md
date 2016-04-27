@@ -19,12 +19,12 @@ When facebook messenger API was launched every other blog including Techcrunch s
 GETTING STARTED
 =======
 
-Creating Facebook Application.
+Creating facebook application
 ---------------
 
-In order to make your chatbot with botsify you need to first create a Facebook application. You can create one for free here. One you have your application you need a Facebook page as well or it could be your existing business page.
+In order to make your chatbot with botsify you need to first create a Facebook application. You can create one for [FREE HERE](https://www.developers.facebook.com "Facebook Developers"). One you have your application you need a Facebook page as well or it could be your existing business page.
 
-Creating your first bot with botsify:
+Creating your first bot with botsify
 ---------------
 
 Once you have created the application in Facebook you need to create an account with Botsify and login. In the left hand menu you should see **Create Bot**, go ahead and click it. It is a simple form to take information about your Facebook application and page which you just created. You need to know following fields before filling out this form.
@@ -35,9 +35,7 @@ Once you have created the application in Facebook you need to create an account 
 This is the ID of your application which you just created. You can find it in your application settings.
 
 ``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.github('USER/REPO')
-});
+![alt text](http://i.imgur.com/mrjbNnr.png "Facebook Application ID")
 ```
 ### Secret Key
 
@@ -219,7 +217,7 @@ So instead of **Sorry we do not have {param1} shoes in stock** if you type your 
 This will call your API end point with related parameter and you can give your response to customers in string formatted, right from your API.
 
 
-Conclusion:
+Conclusion
 ===========
 
 So this is how you can create your messenger chatbots with Botsify. Currently your application is in development mode but you can fill in additional information and request facebook to publish your chatbot. Once it is published you can even link messenger on your website page.
