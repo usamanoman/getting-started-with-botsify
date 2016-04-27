@@ -70,13 +70,7 @@ Verifying application connection
 
 Once you see this **Green Check mark**. It is a clear signal that you have successfully connected your application and Botsify.
 
-To setup a webhook you need to go to **Your Facebook Application -> Messenger -> Setup Webhook**. You will see a webhook configuration form like in the snapshot below.
-
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/6BgbFkg.png "Verification from facebook")
 
 ### Verification from botsify
 
@@ -84,22 +78,14 @@ Flatdoc.run({
  * Go to your facebook page (which you connected)
  * Send message to the page and type **Hi**.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/IZX1ZLz.png "Verification from botsify")
+
 
  * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
  * Go back to Botsify and click “Test”. If all set you should get this screen which will help you write your chatbot?
 
+![alt text](http://i.imgur.com/ESqam1K.png "TEST from botsify")
 
-
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
 
 Write / Setup your chatbot responses
 ------------
@@ -120,11 +106,7 @@ Second is **Default Response** which is the response when your chatbot will fail
 
 Once you have submitted these two responses you can go back to your page and chat with your bot. You will not receive the greeting message because you have already started conversation with the bot but if you type “asasafaf3131”; some gibberish; it will respond with our default response.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/Qz4ZwfY.png "Adding Basic Responses")
 
 #### Adding Advance Responses
 
@@ -132,11 +114,7 @@ Flatdoc.run({
 
 For advance responses you can go extra mile and create some hard coded and dynamic API based responses. You will see “Messenger like” UI in advance responses which let you create stories with respect to your business.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/x7t0W8W.png "Adding Basic Responses")
 
 Let’s understand the UI first. If you select **Your Application name** in left hand panel it means you are trying to chat as a user. And if you have user selected in the left hand panel it means you are trying to chat as a bot.
 
@@ -161,28 +139,18 @@ Let’s say we have an online shoes website and a story is user is chatting in o
 
  * So while you have **bot** selected in the left hand panel type @list as a user. You will see the command and parameters fields are automatically filled. 
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/K1qaQhL.png "Adding Advance Responses")
+
 
  * Now select **User** from left hand panel and respond to this command as a “Chatbot” we will write: **@shoes/men @shoes/women @sandals @slippers**
  * A confirmation pop up will appear; click **OK** to submit your response. 
  * Go back to facebook messenger and type: **@list**. You will see that you get the response of @list we just submitted.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/b8imNyW.png "@list")
+
 Now assume our user is more interested in **Men shoes** and writes @shoes/men. Once you type this command as a user **command and parameter fields** will be auto filled with “shoes” and “men” respectively. Since you can have any number of parameters to give more contexts to your command you will see **param1** associated as the key of your first parameter.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/5gpKufP.png "Param1")
 
 Now responds to this message as a bot and type: **Sorry, we do not have {param1} shoes in stock. Do you want me to show some slippers?**.
 
@@ -191,11 +159,7 @@ So if you go back to your messenger and type: **@shoes/men** you will see that y
 
 Since this is personalized response even if your user type **@shoes/women** your bot will say. **Sorry we do not have women shoes in stock. Do you want me to show some slippers?**.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('http://yoursite.com/Readme.md')
-});
-```
+![alt text](http://i.imgur.com/KdkyU0h.png "Param2")
 
 
 Advance API based responses
@@ -220,9 +184,6 @@ We are helping businesses to increase conversions by making intelligent chatbots
 Currently botsify is running beta and continuously improving the website and functionalities. Let us know your feedback and queries at support@botsify.com.
 
 Thanks.
-
-**Flatdoc** is authored and maintained by [Rico Sta. Cruz][rsc] with help from its 
-[contributors][c].
 
  * [My website](http://botsify.com) (botsify.com)
  * [Github](http://github.com/usamanoman) (@usamanoman)
