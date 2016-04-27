@@ -1,4 +1,4 @@
-Botsify
+WHAT IS BOTSIFY?
 =======
 
 Botsify helps you create facebook messenger chatbot for your business/page without any coding.
@@ -16,13 +16,13 @@ When facebook messenger API was launched every other blog including Techcrunch s
  * CNN
  * Wall Street Journal
 
-Getting started
+GETTING STARTED
+=======
+
+Creating Facebook Application.
 ---------------
 
-Create a file based on the template, which has a bare DOM, link to the
-scripts, and a link to a theme. It will look something like this (not exact).
-For GitHub projects, simply place this file in your [GitHub pages] branch and
-you're all good to go.
+In order to make your chatbot with botsify you need to first create a Facebook application. You can create one for free here. One you have your application you need a Facebook page as well or it could be your existing business page.
 
 *In short: just download this file and upload it somewhere.*
 
