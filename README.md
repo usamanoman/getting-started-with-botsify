@@ -34,7 +34,7 @@ Once you have created the application in Facebook you need to create an account 
 
 This is the ID of your application which you just created. You can find it in your application settings.
 
-``` javascript
+```
 ![alt text](http://i.imgur.com/mrjbNnr.png "Facebook Application ID")
 ```
 ### Secret Key
