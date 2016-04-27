@@ -35,15 +35,15 @@ The main JS and CSS files are also available in [npm] and [bower].
 [bower]: http://bower.io/search/?q=flatdoc
 [npm]: https://www.npmjs.org/package/flatdoc
 
-Registering on Botsify and creating your first bot:
+Registering on Botsify and 
+creating your first bot:
 ---------------
 
-Once you have created the application in Facebook you need to create an account with Botsify and login. In the left hand menu you should see “Create Bot”, go ahead and click it. It is a simple form to take information about your Facebook application and page which you just created. You need to know following fields before filling out this form.
+Once you have created the application in Facebook you need to create an account with Botsify and login. In the left hand menu you should see **Create Bot**, go ahead and click it. It is a simple form to take information about your Facebook application and page which you just created. You need to know following fields before filling out this form.
 
 
 ### Facebook Application ID
 
-To fetch a Github Repository's readme file, use the `Flatdoc.github` fetcher.
 This is the ID of your application which you just created. You can find it in your application settings.
 
 ``` javascript
@@ -53,7 +53,7 @@ Flatdoc.run({
 ```
 ### Secret Key
 
-It is just a connector between Facebook Application Webhook and Botsify. You can type anything for example “my_secret_key”.
+It is just a connector between Facebook Application Webhook and Botsify. You can type anything for example **my_secret_key**.
 
 
 ``` javascript
@@ -72,21 +72,29 @@ Flatdoc.run({
 });
 ```
 
-[GitHub Pages guide >][GitHub Pages]
+Connecting your facebook application with Botsify
+---------------
 
-### Via a file
+Once you have filled this form you will see your application webhook. This webhook will allow you to connect your facebook application with Botsify.
 
-You may also fetch a file. In this example, this fetches the file `Readme.md` in
-the same folder as the HTML file.
+To setup a webhook you need to go to “Your Facebook Application -> Messenger -> Setup Webhook”. You will see a webhook configuration form like in the snapshot below.
 
-``` javascript
-Flatdoc.run({
-  fetcher: Flatdoc.file('Readme.md')
-});
-```
+ * Your URL is going to be the one provided by Botsify.
+ * Your Application Secret Key is going be the same which you filled while filling your form.
+ * Check all options in order to enjoy full access to the messenger API. You can be selective as well about these options.
 
-You may actually supply any URL here. It will be fetched via AJAX. This is
-useful for local testing.
+
+Verifying Application Connection
+---------------
+
+Once you see this “Green Check mark”. It is a clear signal that you have successfully connected your application and Botsify.
+
+To setup a webhook you need to go to “Your Facebook Application -> Messenger -> Setup Webhook”. You will see a webhook configuration form like in the snapshot below.
+
+ * Now turn on your application in Botsify. You can also use this button to turn it off anytime to switch from **Bot mode** to **manual mode**.
+ * Go to your facebook page (which you connected)
+ * Send message to the page and type **Hi**.
+ * You should get an automated **Bot** response telling you that you have successfully configured your Bot.
 
 ``` javascript
 Flatdoc.run({
