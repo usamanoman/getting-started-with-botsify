@@ -5,7 +5,7 @@ Botsify helps you create facebook messenger chatbot for your business/page witho
 
 You can artificial intelligent chatbots with our technology with no technical knowledge require. Technical mates can go extra mile with Botsify by integrating their API with Chatbot to make it extra effective. People can do analysis on different behavior of their bots and also run marketing campaigns to the people who opted for it.
 
-With over a billion user you can now double you conversions with messenger chatbot.
+With over a billion users you can now double you conversions with messenger chatbots.
 
 There are a lot of businesses excited with the lunch of facebook messenger because they have one more medium other than Email Marketing to start interacting with their customers and increase conversions by assisting through the process/offering different deal to their customers.
 
